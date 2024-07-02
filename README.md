@@ -46,7 +46,7 @@ This project is a Rails application that provides a RESTful API for managing mor
 4. **Run the tests to ensure everything is set up correctly:**
 
     ```sh
-    rspec
+    rspec spec
     ```
 
 ### Running the Server
@@ -65,8 +65,11 @@ The API will be available at `http://localhost:3000`.
 
 The API uses basic HTTP authentication. For testing purposes, the username and password are hardcoded in the code.
 
-- **Username**: `test_user`
-- **Password**: `test_password`
+- **Username**: `admin`
+- **Password**: `password`
+
+### API Documentation
+For a detailed overview of all API endpoints, including request parameters and response objects, please refer to our [Swagger documentation](https://bump.sh/giordano/doc/mortgage).
 
 ### CRUD Operations
 
