@@ -34,4 +34,5 @@ group :development, :test do
   gem "pry", "~> 0.14.2"
   gem "pry-byebug"
   gem "rspec-rails", "~> 6.1.0"
+  gem "rswag"
 end
