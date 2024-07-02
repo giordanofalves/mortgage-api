@@ -35,4 +35,6 @@ group :development, :test do
   gem "pry-byebug"
   gem "rspec-rails", "~> 6.1.0"
   gem "rswag"
+  gem "rswag-api"
+  gem "rswag-ui"
 end
