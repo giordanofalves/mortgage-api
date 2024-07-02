@@ -355,6 +355,8 @@ DEPENDENCIES
   rails-controller-testing
   rspec-rails (~> 6.1.0)
   rswag
+  rswag-api
+  rswag-ui
   rubocop
   rubocop-rails_config
   shoulda-matchers (~> 6.0)

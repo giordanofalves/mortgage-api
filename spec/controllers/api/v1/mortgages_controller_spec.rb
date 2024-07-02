@@ -5,12 +5,28 @@ require "rails_helper"
 RSpec.describe Api::V1::MortgagesController, type: :controller do
   let!(:mortgage) { create(:mortgage) }
 
+  before do
+    credentials = ActionController::HttpAuthentication::Basic.encode_credentials("admin", "password")
+    request.env["HTTP_AUTHORIZATION"] = credentials
+  end
+
   describe "GET #index" do
     it "returns a success response" do
       get :index, format: :json
 
       expect(response).to be_successful
       expect(assigns(:mortgages)).to eq([mortgage])
+    end
+
+    context "when not authenticated" do
+      before do
+        request.env["HTTP_AUTHORIZATION"] = nil
+      end
+
+      it "returns http unauthorized" do
+        get :index
+        expect(response).to have_http_status(:unauthorized)
+      end
     end
   end
 
